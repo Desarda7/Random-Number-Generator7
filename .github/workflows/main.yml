@@ -27,4 +27,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: desarda/random-number-generator7:detyraDesarda
+          tags: desarda/random-number-generator7:latest7
