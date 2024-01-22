@@ -1,58 +1,51 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    
-    <groupId>java.project.Random-Number-Generator7</groupId>
-    <artifactId>Random-Number-Generator7</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>Random-Number-Generator7</name>
- 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+<modelVersion>4.0.0</modelVersion>
+  <groupId>java.project.RandomNumberGenerator</groupId>
+  <artifactId>RandomNumberGenerator</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>RandomNumberGenerator</name>
+  
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.3</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.1.6.RELEASE</version>
     </parent>
- 
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-       
-        <!-- Other dependencies, if needed -->
-       
-        <!-- Google Cloud App Engine Plugin -->
-        <dependency>
-            <groupId>com.google.cloud.tools</groupId>
-            <artifactId>appengine-maven-plugin</artifactId>
-            <version>2.3.0</version> <!-- Use the latest version -->
-        </dependency>
+        
+<!-- https://mvnrepository.com/artifact/com.google.cloud.tools/appengine-maven-plugin -->
+    <dependency>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>appengine-maven-plugin</artifactId>
+        <version>2.1.0</version>
+    </dependency>
+
+        
     </dependencies>
- 
+
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
     </properties>
- 
+
+
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-           
-            <!-- Google Cloud App Engine Plugin -->
+            
             <plugin>
-               <groupId>com.google.appengine</groupId>
-               <artifactId>appengine-maven-plugin</artifactId>
-               <version>2.3.0</version> <!-- Use the latest version -->
-               <configuration>
-                   <!-- Configure plugin if needed -->
-               </configuration>
-            </plugin>
+             <groupId>com.google.appengine</groupId>
+             <artifactId>appengine-maven-plugin</artifactId>
+             <version>1.9.76</version>
+          </plugin>
+            
         </plugins>
     </build>
 </project>
-
-
