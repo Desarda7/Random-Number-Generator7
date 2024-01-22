@@ -1,0 +1,8 @@
+spring:
+  application: name:myapp
+  profile:
+    active: dev
+
+  # Server properties
+  server:
+    port: 8081
