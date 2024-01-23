@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cw-generate
+  labels:
+    app: cw-generate
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cw-generate
+  template:
+    metadata:
+      labels:
+        app: cw-generate
+    spec:
+      containers:
+        - name: cw-generate
+          image: desarda/random-number-generator7:latest
+          ports:
+            - containerPort: 8080
+# kubectl apply -f app-deployment.yaml
